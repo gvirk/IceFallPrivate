@@ -1,5 +1,5 @@
 /**
- * @authors: Gursharnbir Singh & Vineet Singh
+ * @module scenes
  */
 module scenes {
     /**
@@ -12,14 +12,14 @@ module scenes {
      * @param _stage {createjs.Stage}
      * @param _gameLabel {createjs.Text}
      * @param _startButton {createjs.Bitmap}
-     * @param _instructionButton {createjs.Bitmap}
+     * @param _exitButton {createjs.Bitmap}
      */
     export class Menu extends scenes.Scene {
         private _blocker: HTMLElement;
         private _stage: createjs.Stage;
         private _gameLabel: createjs.Text;
         private _startButton: createjs.Bitmap;
-        private _instructionButton: createjs.Bitmap;
+        private _exitButton: createjs.Bitmap;
         
 
         private spotLight: SpotLight;
@@ -194,24 +194,24 @@ module scenes {
                 changeScene();
             });
             
-            // Add Instruction Button
-            this._instructionButton = new createjs.Bitmap(assets.getResult("InstructionButton"));
-            this._instructionButton.regX = this._instructionButton.getBounds().width * 0;
-            this._instructionButton.regY = this._instructionButton.getBounds().height * 0.2;
-            this._instructionButton.x = config.Screen.WIDTH * 0.5;
-            this._instructionButton.y = (config.Screen.HEIGHT * 0.5) + 100;
-            this._stage.addChild(this._instructionButton);
-            console.log("Added Instruction Button to the Scene");
+            // Add exit Button
+            this._exitButton = new createjs.Bitmap(assets.getResult("ExitButton"));
+            this._exitButton.regX = this._exitButton.getBounds().width * 0;
+            this._exitButton.regY = this._exitButton.getBounds().height * 0.2;
+            this._exitButton.x = config.Screen.WIDTH * 0.5;
+            this._exitButton.y = (config.Screen.HEIGHT * 0.5) + 100;
+            this._stage.addChild(this._exitButton);
+            console.log("Added exit Button to the Scene");
 
-            this._instructionButton.on("mouseover", (event: createjs.MouseEvent) => {
+            this._exitButton.on("mouseover", (event: createjs.MouseEvent) => {
                 event.target.alpha = 0.7;
             });
 
-            this._instructionButton.on("mouseout", (event: createjs.MouseEvent) => {
+            this._exitButton.on("mouseout", (event: createjs.MouseEvent) => {
                 event.target.alpha = 1.0;
             });
 
-            this._instructionButton.on("click", (event: createjs.MouseEvent) => {
+            this._exitButton.on("click", (event: createjs.MouseEvent) => {
                 currentScene = config.Scene.EXIT;
                 changeScene();
             });

@@ -65,6 +65,8 @@ var manifest = [
     { id: "InstructionPanel3", src: "../../Assets/images/InstructionsStage3.png" },
     { id: "BackButton", src: "../../Assets/images/BackButton.png" },
     { id: "StartButton", src: "../../Assets/images/StartButton.png" },
+    { id: "ExitButton", src: "../../Assets/images/exit.png" },
+    { id: "ExitPanel", src: "../../Assets/images/credits.png" },
     { id: "PlayAgainButton", src: "../../Assets/images/PlayAgainButton.png" },
     { id: "InstructionButton", src: "../../Assets/images/InstructionButton.png" },
     { id: "menu", src: "../../Assets/audio/menu.mp3" },

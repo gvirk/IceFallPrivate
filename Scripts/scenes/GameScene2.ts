@@ -129,7 +129,8 @@ module scenes {
          * @returns void
          */
         private _initialize(): void {
-
+            scoreValue = scoreValue;
+            livesValue = livesValue;
             // Create to HTMLElements
             this.blocker = document.getElementById("blocker");
             this.instructions = document.getElementById("instructions");

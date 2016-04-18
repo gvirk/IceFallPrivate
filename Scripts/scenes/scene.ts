@@ -1,6 +1,3 @@
-/**
- * @authors: Gursharnbir Singh & Vineet Singh
- */
 module scenes {
     /**
      * The Scene class is a generic / custom Scene container

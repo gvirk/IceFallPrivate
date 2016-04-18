@@ -60,6 +60,8 @@ module scenes {
          * @return void
          */
         private _initialize(): void {
+            scoreValue = scoreValue;
+            livesValue = livesValue;
             // Create to HTMLElements
             this._blocker = document.getElementById("blocker");
             this._blocker.style.display = "none";

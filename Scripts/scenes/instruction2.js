@@ -48,6 +48,8 @@ var scenes;
          * @return void
          */
         Instruction2.prototype._initialize = function () {
+            scoreValue = scoreValue;
+            livesValue = livesValue;
             // Create to HTMLElements
             this._blocker = document.getElementById("blocker");
             this._blocker.style.display = "none";

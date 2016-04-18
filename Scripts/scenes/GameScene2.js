@@ -47,6 +47,8 @@ var scenes;
          * @returns void
          */
         GameScene2.prototype._initialize = function () {
+            scoreValue = scoreValue;
+            livesValue = livesValue;
             // Create to HTMLElements
             this.blocker = document.getElementById("blocker");
             this.instructions = document.getElementById("instructions");
