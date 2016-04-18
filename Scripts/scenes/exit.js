@@ -105,6 +105,24 @@ var scenes;
             this._exitPanel.y = (config.Screen.HEIGHT * 0.5);
             this._stage.addChild(this._exitPanel);
             console.log("Added ExitPanel to the Scene");
+            // Add Start Button
+            this._backButton = new createjs.Bitmap(assets.getResult("BackButton"));
+            this._backButton.regX = this._backButton.getBounds().width * 0.5;
+            this._backButton.regY = this._backButton.getBounds().height * 0.5;
+            this._backButton.x = config.Screen.WIDTH * 0.5;
+            this._backButton.y = (config.Screen.HEIGHT * 0.9);
+            this._stage.addChild(this._backButton);
+            console.log("Added Start Button to the Scene");
+            this._backButton.on("mouseover", function (event) {
+                event.target.alpha = 0.7;
+            });
+            this._backButton.on("mouseout", function (event) {
+                event.target.alpha = 1;
+            });
+            this._backButton.on("click", function (event) {
+                currentScene = config.Scene.MENU;
+                changeScene();
+            });
             // Add Spot Light to the scene
             this.addSpotLight();
             camera.position.set(0, 0, -20);

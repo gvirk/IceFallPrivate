@@ -20,6 +20,7 @@ module scenes {
         private _stage: createjs.Stage;
         private _exitPanel: createjs.Bitmap;
         private spotLight: SpotLight;
+        private _backButton: createjs.Bitmap;
 
         /**
          * Empty Constructor - calls _initialize and start methods
@@ -88,6 +89,7 @@ module scenes {
             this.add(this.spotLight);
             console.log("Added spotLight to scene");
         }
+            
 
 
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++
@@ -117,6 +119,29 @@ module scenes {
             this._stage.addChild(this._exitPanel);
             console.log("Added ExitPanel to the Scene");
 
+            // Add Start Button
+            this._backButton = new createjs.Bitmap(assets.getResult("BackButton"));
+            this._backButton.regX = this._backButton.getBounds().width * 0.5;
+            this._backButton.regY = this._backButton.getBounds().height * 0.5;
+            this._backButton.x = config.Screen.WIDTH * 0.5;
+            this._backButton.y = (config.Screen.HEIGHT * 0.9);
+            this._stage.addChild(this._backButton);
+            console.log("Added Start Button to the Scene");
+
+
+
+            this._backButton.on("mouseover", (event: createjs.MouseEvent) => {
+                event.target.alpha = 0.7;
+            });
+
+            this._backButton.on("mouseout", (event: createjs.MouseEvent) => {
+                event.target.alpha = 1;
+            });
+
+            this._backButton.on("click", (event: createjs.MouseEvent) => {
+                currentScene = config.Scene.MENU;
+                changeScene();
+            });
 
             // Add Spot Light to the scene
             this.addSpotLight();
