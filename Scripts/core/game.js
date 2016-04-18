@@ -70,7 +70,8 @@ var manifest = [
     { id: "PlayAgainButton", src: "../../Assets/images/PlayAgainButton.png" },
     { id: "InstructionButton", src: "../../Assets/images/InstructionButton.png" },
     { id: "menu", src: "../../Assets/audio/menu.mp3" },
-    { id: "game1_background", src: "../../Assets/audio/game1_background.mp3" }
+    { id: "game1_background", src: "../../Assets/audio/game1_background.mp3" },
+    { id: "instructionsbg", src: "../../Assets/audio/instructions.mp3" }
 ];
 function preload() {
     assets = new createjs.LoadQueue();

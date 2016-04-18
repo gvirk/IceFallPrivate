@@ -112,7 +112,7 @@ module scenes {
          */
         public sound(): void {
             createjs.Sound.stop();
-            createjs.Sound.play("game1_background");
+            createjs.Sound.play("instructionsbg");
             createjs.Sound.volume=0.5;
         }
         
@@ -159,9 +159,7 @@ module scenes {
             this.name = "Instruction Scene 1";
             this.setGravity(new THREE.Vector3(0, 0, 0));
 
-            //Adding Instruction sound
-            createjs.Sound.stop();
-            createjs.Sound.play("instruction");
+            
 
 
 

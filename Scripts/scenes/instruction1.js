@@ -95,7 +95,7 @@ var scenes;
          */
         Instruction1.prototype.sound = function () {
             createjs.Sound.stop();
-            createjs.Sound.play("game1_background");
+            createjs.Sound.play("instructionsbg");
             createjs.Sound.volume = 0.5;
         };
         Instruction1.prototype.setupScoreboard = function () {
@@ -128,9 +128,6 @@ var scenes;
             // Scene changes for Physijs
             this.name = "Instruction Scene 1";
             this.setGravity(new THREE.Vector3(0, 0, 0));
-            //Adding Instruction sound
-            createjs.Sound.stop();
-            createjs.Sound.play("instruction");
             console.log("Added InstructionPanel to the Scene");
             // Add Company Logo
             this._instructionPanel = new createjs.Bitmap(assets.getResult("InstructionPanel1"));
