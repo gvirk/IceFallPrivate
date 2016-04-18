@@ -81,62 +81,62 @@ module scenes {
         private boundary5Geometry: CubeGeometry;
         private boundary5: Physijs.Mesh;
 
-        private iw1Geometry: CubeGeometry;
-        private iw1: Physijs.Mesh;
+        private wall1Geometry: CubeGeometry;
+        private wall1: Physijs.Mesh;
 
-        private iw2Geometry: CubeGeometry;
-        private iw2: Physijs.Mesh;
+        private wall2Geometry: CubeGeometry;
+        private wall2: Physijs.Mesh;
 
-        private iw3Geometry: CubeGeometry;
-        private iw3: Physijs.Mesh;
+        private wall3Geometry: CubeGeometry;
+        private wall3: Physijs.Mesh;
 
-        private iw4Geometry: CubeGeometry;
-        private iw4: Physijs.Mesh;
+        private wall4Geometry: CubeGeometry;
+        private wall4: Physijs.Mesh;
 
-        private iw5Geometry: CubeGeometry;
-        private iw5: Physijs.Mesh;
+        private wall5Geometry: CubeGeometry;
+        private wall5: Physijs.Mesh;
 
-        private iw6Geometry: CubeGeometry;
-        private iw6: Physijs.Mesh;
+        private wall6Geometry: CubeGeometry;
+        private wall6: Physijs.Mesh;
 
-        private iw7Geometry: CubeGeometry;
-        private iw7: Physijs.Mesh;
+        private wall7Geometry: CubeGeometry;
+        private wall7: Physijs.Mesh;
 
-        private iw8Geometry: CubeGeometry;
-        private iw8: Physijs.Mesh;
+        private wall8Geometry: CubeGeometry;
+        private wall8: Physijs.Mesh;
 
-        private iw8aGeometry: CubeGeometry;
-        private iw8a: Physijs.Mesh;
+        private wall8aGeometry: CubeGeometry;
+        private wall8a: Physijs.Mesh;
 
-        private iw9Geometry: CubeGeometry;
-        private iw9: Physijs.Mesh;
+        private wall9Geometry: CubeGeometry;
+        private wall9: Physijs.Mesh;
 
-        private iw10Geometry: CubeGeometry;
-        private iw10: Physijs.Mesh;
+        private wall10Geometry: CubeGeometry;
+        private wall10: Physijs.Mesh;
 
-        private iw11Geometry: CubeGeometry;
-        private iw11: Physijs.Mesh;
+        private wall11Geometry: CubeGeometry;
+        private wall11: Physijs.Mesh;
 
-        private iw12Geometry: CubeGeometry;
-        private iw12: Physijs.Mesh;
+        private wall12Geometry: CubeGeometry;
+        private wall12: Physijs.Mesh;
 
-        private iw13Geometry: CubeGeometry;
-        private iw13: Physijs.Mesh;
+        private wall13Geometry: CubeGeometry;
+        private wall13: Physijs.Mesh;
 
-        private iw14Geometry: CubeGeometry;
-        private iw14: Physijs.Mesh;
+        private wall14Geometry: CubeGeometry;
+        private wall14: Physijs.Mesh;
 
-        private iw15Geometry: CubeGeometry;
-        private iw15: Physijs.Mesh;
+        private wall15Geometry: CubeGeometry;
+        private wall15: Physijs.Mesh;
 
-        private iw16Geometry: CubeGeometry;
-        private iw16: Physijs.Mesh;
+        private wall16Geometry: CubeGeometry;
+        private wall16: Physijs.Mesh;
 
-        private iw17Geometry: CubeGeometry;
-        private iw17: Physijs.Mesh;
+        private wall17Geometry: CubeGeometry;
+        private wall17: Physijs.Mesh;
 
-        private iw18Geometry: CubeGeometry;
-        private iw18: Physijs.Mesh;
+        private wall18Geometry: CubeGeometry;
+        private wall18: Physijs.Mesh;
 
         private enemyGeometry: SphereGeometry;
         private enemyMaterial: Physijs.Material;
@@ -403,250 +403,250 @@ module scenes {
             console.log("Added boundary 5");
         }
 
-        private addIW1(): void {
+        private addwall1(): void {
 
-            this.iw1Geometry = new BoxGeometry(2, 4, 74);
+            this.wall1Geometry = new BoxGeometry(2, 4, 74);
             this.wallPhysicsMaterial = Physijs.createMaterial(this.wallMaterial, 0, 0);
-            this.iw1 = new Physijs.ConvexMesh(this.iw1Geometry, this.wallPhysicsMaterial, 0);
-            this.iw1.receiveShadow = true;
-            this.iw1.name = "Wall";
-            this.iw1.position.set(37, 3, -1);
-            this.iw1.rotation.set(0, 0, 0);
-            this.add(this.iw1);
+            this.wall1 = new Physijs.ConvexMesh(this.wall1Geometry, this.wallPhysicsMaterial, 0);
+            this.wall1.receiveShadow = true;
+            this.wall1.name = "Wall";
+            this.wall1.position.set(37, 3, -1);
+            this.wall1.rotation.set(0, 0, 0);
+            this.add(this.wall1);
             console.log("Added Innerwall 1");
         }
 
-        private addIW2(): void {
+        private addwall2(): void {
 
-            this.iw2Geometry = new BoxGeometry(2, 4, 46);
+            this.wall2Geometry = new BoxGeometry(2, 4, 46);
             this.wallPhysicsMaterial = Physijs.createMaterial(this.wallMaterial, 0, 0);
-            this.iw2 = new Physijs.ConvexMesh(this.iw2Geometry, this.wallPhysicsMaterial, 0);
-            this.iw2.receiveShadow = true;
-            this.iw2.name = "Wall";
-            this.iw2.position.set(13, 3, 15);
-            this.iw2.rotation.set(0, 1.570796, 0);
-            this.add(this.iw2);
+            this.wall2 = new Physijs.ConvexMesh(this.wall2Geometry, this.wallPhysicsMaterial, 0);
+            this.wall2.receiveShadow = true;
+            this.wall2.name = "Wall";
+            this.wall2.position.set(13, 3, 15);
+            this.wall2.rotation.set(0, 1.570796, 0);
+            this.add(this.wall2);
             console.log("Added Innerwall 2");
         }
 
-        private addIW3(): void {
+        private addwall3(): void {
 
-            this.iw3Geometry = new BoxGeometry(2, 4, 32);
+            this.wall3Geometry = new BoxGeometry(2, 4, 32);
             this.wallPhysicsMaterial = Physijs.createMaterial(this.wallMaterial, 0, 0);
-            this.iw3 = new Physijs.ConvexMesh(this.iw3Geometry, this.wallPhysicsMaterial, 0);
-            this.iw3.receiveShadow = true;
-            this.iw3.name = "Wall";
-            this.iw3.position.set(25, 3, 32);
-            this.iw3.rotation.set(0, 0, 0);
-            this.add(this.iw3);
+            this.wall3 = new Physijs.ConvexMesh(this.wall3Geometry, this.wallPhysicsMaterial, 0);
+            this.wall3.receiveShadow = true;
+            this.wall3.name = "Wall";
+            this.wall3.position.set(25, 3, 32);
+            this.wall3.rotation.set(0, 0, 0);
+            this.add(this.wall3);
             console.log("Added Innerwall 3");
         }
 
-        private addIW4(): void {
+        private addwall4(): void {
 
-            this.iw4Geometry = new BoxGeometry(2, 4, 40);
+            this.wall4Geometry = new BoxGeometry(2, 4, 40);
             this.wallPhysicsMaterial = Physijs.createMaterial(this.wallMaterial, 0, 0);
-            this.iw4 = new Physijs.ConvexMesh(this.iw4Geometry, this.wallPhysicsMaterial, 0);
-            this.iw4.receiveShadow = true;
-            this.iw4.name = "Wall";
-            this.iw4.position.set(25, 3, -6);
-            this.iw4.rotation.set(0, 0, 0);
-            this.add(this.iw4);
+            this.wall4 = new Physijs.ConvexMesh(this.wall4Geometry, this.wallPhysicsMaterial, 0);
+            this.wall4.receiveShadow = true;
+            this.wall4.name = "Wall";
+            this.wall4.position.set(25, 3, -6);
+            this.wall4.rotation.set(0, 0, 0);
+            this.add(this.wall4);
             console.log("Added Innerwall 4");
         }
 
-        private addIW5(): void {
+        private addwall5(): void {
 
-            this.iw5Geometry = new BoxGeometry(2, 4, 38);
+            this.wall5Geometry = new BoxGeometry(2, 4, 38);
             this.wallPhysicsMaterial = Physijs.createMaterial(this.wallMaterial, 0, 0);
-            this.iw5 = new Physijs.ConvexMesh(this.iw5Geometry, this.wallPhysicsMaterial, 0);
-            this.iw5.receiveShadow = true;
-            this.iw5.name = "Wall";
-            this.iw5.position.set(-5, 3, 27);
-            this.iw5.rotation.set(0, 1.570796, 0);
-            this.add(this.iw5);
+            this.wall5 = new Physijs.ConvexMesh(this.wall5Geometry, this.wallPhysicsMaterial, 0);
+            this.wall5.receiveShadow = true;
+            this.wall5.name = "Wall";
+            this.wall5.position.set(-5, 3, 27);
+            this.wall5.rotation.set(0, 1.570796, 0);
+            this.add(this.wall5);
             console.log("Added Innerwall 5");
         }
 
-        private addIW6(): void {
+        private addwall6(): void {
 
-            this.iw6Geometry = new BoxGeometry(2, 4, 38);
+            this.wall6Geometry = new BoxGeometry(2, 4, 38);
             this.wallPhysicsMaterial = Physijs.createMaterial(this.wallMaterial, 0, 0);
-            this.iw6 = new Physijs.ConvexMesh(this.iw6Geometry, this.wallPhysicsMaterial, 0);
-            this.iw6.receiveShadow = true;
-            this.iw6.name = "Wall";
-            this.iw6.position.set(-5, 3, 3);
-            this.iw6.rotation.set(0, 1.570796, 0);
-            this.add(this.iw6);
+            this.wall6 = new Physijs.ConvexMesh(this.wall6Geometry, this.wallPhysicsMaterial, 0);
+            this.wall6.receiveShadow = true;
+            this.wall6.name = "Wall";
+            this.wall6.position.set(-5, 3, 3);
+            this.wall6.rotation.set(0, 1.570796, 0);
+            this.add(this.wall6);
             console.log("Added Innerwall 6");
         }
 
-        private addIW7(): void {
+        private addwall7(): void {
 
-            this.iw7Geometry = new BoxGeometry(2, 4, 38);
+            this.wall7Geometry = new BoxGeometry(2, 4, 38);
             this.wallPhysicsMaterial = Physijs.createMaterial(this.wallMaterial, 0, 0);
-            this.iw7 = new Physijs.ConvexMesh(this.iw7Geometry, this.wallPhysicsMaterial, 0);
-            this.iw7.receiveShadow = true;
-            this.iw7.name = "Wall";
-            this.iw7.position.set(7, 3, -37);
-            this.iw7.rotation.set(0, 1.570796, 0);
-            this.add(this.iw7);
+            this.wall7 = new Physijs.ConvexMesh(this.wall7Geometry, this.wallPhysicsMaterial, 0);
+            this.wall7.receiveShadow = true;
+            this.wall7.name = "Wall";
+            this.wall7.position.set(7, 3, -37);
+            this.wall7.rotation.set(0, 1.570796, 0);
+            this.add(this.wall7);
             console.log("Added Innerwall 7");
         }
 
-        private addIW8(): void {
+        private addwall8(): void {
 
-            this.iw8Geometry = new BoxGeometry(2, 4, 22);
+            this.wall8Geometry = new BoxGeometry(2, 4, 22);
             this.wallPhysicsMaterial = Physijs.createMaterial(this.wallMaterial, 0, 0);
-            this.iw8 = new Physijs.ConvexMesh(this.iw8Geometry, this.wallPhysicsMaterial, 0);
-            this.iw8.receiveShadow = true;
-            this.iw8.name = "Wall";
-            this.iw8.position.set(-37, 3, 18);
-            this.iw8.rotation.set(0, 1.570796, 0);
-            this.add(this.iw8);
+            this.wall8 = new Physijs.ConvexMesh(this.wall8Geometry, this.wallPhysicsMaterial, 0);
+            this.wall8.receiveShadow = true;
+            this.wall8.name = "Wall";
+            this.wall8.position.set(-37, 3, 18);
+            this.wall8.rotation.set(0, 1.570796, 0);
+            this.add(this.wall8);
             console.log("Added Innerwall 8");
         }
 
-        private addIW8a(): void {
+        private addwall8a(): void {
 
-            this.iw8aGeometry = new BoxGeometry(2, 4, 10);
+            this.wall8aGeometry = new BoxGeometry(2, 4, 10);
             this.wallPhysicsMaterial = Physijs.createMaterial(this.wallMaterial, 0, 0);
-            this.iw8a = new Physijs.ConvexMesh(this.iw8aGeometry, this.wallPhysicsMaterial, 0);
-            this.iw8a.receiveShadow = true;
-            this.iw8a.name = "Wall";
-            this.iw8a.position.set(-43, 3, -21);
-            this.iw8a.rotation.set(0, 1.570796, 0);
-            this.add(this.iw8a);
+            this.wall8a = new Physijs.ConvexMesh(this.wall8aGeometry, this.wallPhysicsMaterial, 0);
+            this.wall8a.receiveShadow = true;
+            this.wall8a.name = "Wall";
+            this.wall8a.position.set(-43, 3, -21);
+            this.wall8a.rotation.set(0, 1.570796, 0);
+            this.add(this.wall8a);
             console.log("Added Innerwall 8a");
         }
 
-        private addIW9(): void {
+        private addwall9(): void {
 
-            this.iw9Geometry = new BoxGeometry(2, 4, 10);
+            this.wall9Geometry = new BoxGeometry(2, 4, 10);
             this.wallPhysicsMaterial = Physijs.createMaterial(this.wallMaterial, 0, 0);
-            this.iw9 = new Physijs.ConvexMesh(this.iw9Geometry, this.wallPhysicsMaterial, 0);
-            this.iw9.receiveShadow = true;
-            this.iw9.name = "Wall";
-            this.iw9.position.set(-43, 3, -3);
-            this.iw9.rotation.set(0, 1.570796, 0);
-            this.add(this.iw9);
+            this.wall9 = new Physijs.ConvexMesh(this.wall9Geometry, this.wallPhysicsMaterial, 0);
+            this.wall9.receiveShadow = true;
+            this.wall9.name = "Wall";
+            this.wall9.position.set(-43, 3, -3);
+            this.wall9.rotation.set(0, 1.570796, 0);
+            this.add(this.wall9);
             console.log("Added Innerwall 9");
         }
 
-        private addIW10(): void {
+        private addwall10(): void {
 
-            this.iw10Geometry = new BoxGeometry(2, 4, 40);
+            this.wall10Geometry = new BoxGeometry(2, 4, 40);
             this.wallPhysicsMaterial = Physijs.createMaterial(this.wallMaterial, 0, 0);
-            this.iw10 = new Physijs.ConvexMesh(this.iw10Geometry, this.wallPhysicsMaterial, 0);
-            this.iw10.receiveShadow = true;
-            this.iw10.name = "Wall";
-            this.iw10.position.set(-37, 3, -14);
-            this.iw10.rotation.set(0, 0, 0);
-            this.add(this.iw10);
+            this.wall10 = new Physijs.ConvexMesh(this.wall10Geometry, this.wallPhysicsMaterial, 0);
+            this.wall10.receiveShadow = true;
+            this.wall10.name = "Wall";
+            this.wall10.position.set(-37, 3, -14);
+            this.wall10.rotation.set(0, 0, 0);
+            this.add(this.wall10);
             console.log("Added Innerwall 10");
         }
 
-        private addIW11(): void {
+        private addwall11(): void {
 
-            this.iw11Geometry = new BoxGeometry(2, 4, 70);
+            this.wall11Geometry = new BoxGeometry(2, 4, 70);
             this.wallPhysicsMaterial = Physijs.createMaterial(this.wallMaterial, 0, 0);
-            this.iw11 = new Physijs.ConvexMesh(this.iw11Geometry, this.wallPhysicsMaterial, 0);
-            this.iw11.receiveShadow = true;
-            this.iw11.name = "Wall";
-            this.iw11.position.set(-25, 3, -3);
-            this.iw11.rotation.set(0, 0, 0);
-            this.add(this.iw11);
+            this.wall11 = new Physijs.ConvexMesh(this.wall11Geometry, this.wallPhysicsMaterial, 0);
+            this.wall11.receiveShadow = true;
+            this.wall11.name = "Wall";
+            this.wall11.position.set(-25, 3, -3);
+            this.wall11.rotation.set(0, 0, 0);
+            this.add(this.wall11);
             console.log("Added Innerwall 11");
         }
 
-        private addIW12(): void {
+        private addwall12(): void {
 
-            this.iw12Geometry = new BoxGeometry(2, 4, 36);
+            this.wall12Geometry = new BoxGeometry(2, 4, 36);
             this.wallPhysicsMaterial = Physijs.createMaterial(this.wallMaterial, 0, 0);
-            this.iw12 = new Physijs.ConvexMesh(this.iw12Geometry, this.wallPhysicsMaterial, 0);
-            this.iw12.receiveShadow = true;
-            this.iw12.name = "Wall";
-            this.iw12.position.set(-13, 3, -30);
-            this.iw12.rotation.set(0, 0, 0);
-            this.add(this.iw12);
+            this.wall12 = new Physijs.ConvexMesh(this.wall12Geometry, this.wallPhysicsMaterial, 0);
+            this.wall12.receiveShadow = true;
+            this.wall12.name = "Wall";
+            this.wall12.position.set(-13, 3, -30);
+            this.wall12.rotation.set(0, 0, 0);
+            this.add(this.wall12);
             console.log("Added Innerwall 1");
         }
 
-        private addIW13(): void {
+        private addwall13(): void {
 
-            this.iw13Geometry = new BoxGeometry(2, 4, 28);
+            this.wall13Geometry = new BoxGeometry(2, 4, 28);
             this.wallPhysicsMaterial = Physijs.createMaterial(this.wallMaterial, 0, 0);
-            this.iw13 = new Physijs.ConvexMesh(this.iw13Geometry, this.wallPhysicsMaterial, 0);
-            this.iw13.receiveShadow = true;
-            this.iw13.name = "Wall";
-            this.iw13.position.set(-1, 3, -12);
-            this.iw13.rotation.set(0, 0, 0);
-            this.add(this.iw13);
+            this.wall13 = new Physijs.ConvexMesh(this.wall13Geometry, this.wallPhysicsMaterial, 0);
+            this.wall13.receiveShadow = true;
+            this.wall13.name = "Wall";
+            this.wall13.position.set(-1, 3, -12);
+            this.wall13.rotation.set(0, 0, 0);
+            this.add(this.wall13);
             console.log("Added Innerwall 1");
         }
 
-        private addIW14(): void {
+        private addwall14(): void {
 
-            this.iw14Geometry = new BoxGeometry(2, 4, 28);
+            this.wall14Geometry = new BoxGeometry(2, 4, 28);
             this.wallPhysicsMaterial = Physijs.createMaterial(this.wallMaterial, 0, 0);
-            this.iw14 = new Physijs.ConvexMesh(this.iw14Geometry, this.wallPhysicsMaterial, 0);
-            this.iw14.receiveShadow = true;
-            this.iw14.name = "Wall";
-            this.iw14.position.set(11, 3, -22);
-            this.iw14.rotation.set(0, 0, 0);
-            this.add(this.iw14);
+            this.wall14 = new Physijs.ConvexMesh(this.wall14Geometry, this.wallPhysicsMaterial, 0);
+            this.wall14.receiveShadow = true;
+            this.wall14.name = "Wall";
+            this.wall14.position.set(11, 3, -22);
+            this.wall14.rotation.set(0, 0, 0);
+            this.add(this.wall14);
             console.log("Added Innerwall 14");
         }
 
-        private addIW15(): void {
+        private addwall15(): void {
 
-            this.iw15Geometry = new BoxGeometry(2, 4, 11);
+            this.wall15Geometry = new BoxGeometry(2, 4, 11);
             this.wallPhysicsMaterial = Physijs.createMaterial(this.wallMaterial, 0, 0);
-            this.iw15 = new Physijs.ConvexMesh(this.iw15Geometry, this.wallPhysicsMaterial, 0);
-            this.iw15.receiveShadow = true;
-            this.iw15.name = "Wall";
-            this.iw15.position.set(10, 3, 33.5);
-            this.iw15.rotation.set(0, 0, 0);
-            this.add(this.iw15);
+            this.wall15 = new Physijs.ConvexMesh(this.wall15Geometry, this.wallPhysicsMaterial, 0);
+            this.wall15.receiveShadow = true;
+            this.wall15.name = "Wall";
+            this.wall15.position.set(10, 3, 33.5);
+            this.wall15.rotation.set(0, 0, 0);
+            this.add(this.wall15);
             console.log("Added Innerwall 15");
         }
 
-        private addIW16(): void {
+        private addwall16(): void {
 
-            this.iw16Geometry = new BoxGeometry(2, 4, 11);
+            this.wall16Geometry = new BoxGeometry(2, 4, 11);
             this.wallPhysicsMaterial = Physijs.createMaterial(this.wallMaterial, 0, 0);
-            this.iw16 = new Physijs.ConvexMesh(this.iw16Geometry, this.wallPhysicsMaterial, 0);
-            this.iw16.receiveShadow = true;
-            this.iw16.name = "Wall";
-            this.iw16.position.set(-2, 3, 42.5);
-            this.iw16.rotation.set(0, 0, 0);
-            this.add(this.iw16);
+            this.wall16 = new Physijs.ConvexMesh(this.wall16Geometry, this.wallPhysicsMaterial, 0);
+            this.wall16.receiveShadow = true;
+            this.wall16.name = "Wall";
+            this.wall16.position.set(-2, 3, 42.5);
+            this.wall16.rotation.set(0, 0, 0);
+            this.add(this.wall16);
             console.log("Added Innerwall 16");
         }
 
-        private addIW17(): void {
+        private addwall17(): void {
 
-            this.iw17Geometry = new BoxGeometry(2, 4, 11);
+            this.wall17Geometry = new BoxGeometry(2, 4, 11);
             this.wallPhysicsMaterial = Physijs.createMaterial(this.wallMaterial, 0, 0);
-            this.iw17 = new Physijs.ConvexMesh(this.iw17Geometry, this.wallPhysicsMaterial, 0);
-            this.iw17.receiveShadow = true;
-            this.iw17.name = "Wall";
-            this.iw17.position.set(-14, 3, 33.5);
-            this.iw17.rotation.set(0, 0, 0);
-            this.add(this.iw17);
+            this.wall17 = new Physijs.ConvexMesh(this.wall17Geometry, this.wallPhysicsMaterial, 0);
+            this.wall17.receiveShadow = true;
+            this.wall17.name = "Wall";
+            this.wall17.position.set(-14, 3, 33.5);
+            this.wall17.rotation.set(0, 0, 0);
+            this.add(this.wall17);
             console.log("Added Innerwall 1");
         }
 
-        private addIW18(): void {
+        private addwall18(): void {
 
-            this.iw18Geometry = new BoxGeometry(2, 4, 5);
+            this.wall18Geometry = new BoxGeometry(2, 4, 5);
             this.wallPhysicsMaterial = Physijs.createMaterial(this.wallMaterial, 0, 0);
-            this.iw18 = new Physijs.ConvexMesh(this.iw18Geometry, this.wallPhysicsMaterial, 0);
-            this.iw18.receiveShadow = true;
-            this.iw18.name = "Wall";
-            this.iw18.position.set(-25, 3, 45.5);
-            this.iw18.rotation.set(0, 0, 0);
-            this.add(this.iw18);
+            this.wall18 = new Physijs.ConvexMesh(this.wall18Geometry, this.wallPhysicsMaterial, 0);
+            this.wall18.receiveShadow = true;
+            this.wall18.name = "Wall";
+            this.wall18.position.set(-25, 3, 45.5);
+            this.wall18.rotation.set(0, 0, 0);
+            this.add(this.wall18);
             console.log("Added Innerwall 18");
         }
 
@@ -1030,25 +1030,25 @@ module scenes {
             this.addBoundary4();
             this.addBoundary5();
 
-            this.addIW1();
-            this.addIW2();
-            this.addIW3();
-            this.addIW4();
-            this.addIW5();
-            this.addIW6();
-            this.addIW7();
-            this.addIW8();
-            this.addIW8a();
-            this.addIW9();
-            this.addIW10();
-            this.addIW11();
-            this.addIW12();
-            this.addIW13();
-            this.addIW14();
-            this.addIW15();
-            this.addIW16();
-            this.addIW17();
-            this.addIW18();
+            this.addwall1();
+            this.addwall2();
+            this.addwall3();
+            this.addwall4();
+            this.addwall5();
+            this.addwall6();
+            this.addwall7();
+            this.addwall8();
+            this.addwall8a();
+            this.addwall9();
+            this.addwall10();
+            this.addwall11();
+            this.addwall12();
+            this.addwall13();
+            this.addwall14();
+            this.addwall15();
+            this.addwall16();
+            this.addwall17();
+            this.addwall18();
 
             // Collision check for DeathPlane
             this.deathPlane.addEventListener('collision', function(otherObject){
@@ -1106,25 +1106,7 @@ module scenes {
                     }
                 }
 
-                if (eventObject.name === "Wall") {
-
-                    createjs.Sound.play("hit");
-                    livesValue--;
-                    if (livesValue <= 0) {
-                        // Exit Pointer Lock
-                        document.exitPointerLock();
-                        self.children = []; // an attempt to clean up
-                        self.player.remove(camera);
-
-                        // Play the Game Over Scene
-                        currentScene = config.Scene.OVER;
-                        changeScene();
-                    } else {
-                        // otherwise reset my player and update Lives
-                        self.livesLabel.text = "LIVES: " + livesValue;
-
-                    }
-                }
+               
 
                 if (eventObject.name === "WinningWall") {
 
