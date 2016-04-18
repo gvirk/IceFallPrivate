@@ -128,14 +128,14 @@ var scenes;
             this.setGravity(new THREE.Vector3(0, 0, 0));
             this.sound();
             // Add Game Label
-            this._gameLabel = new createjs.Text(" ICE FALL", "130px Algerian", "#000000");
+            this._gameLabel = new createjs.Text(" ICE FALL", "130px Consolas", "#000000");
             this._gameLabel.regX = this._gameLabel.getMeasuredWidth() * 0.5;
             this._gameLabel.regY = this._gameLabel.getMeasuredLineHeight() * 0.5;
             this._gameLabel.x = config.Screen.WIDTH * 0.5;
             this._gameLabel.y = config.Screen.HEIGHT * 0.5;
             this._stage.addChild(this._gameLabel);
             console.log("Added Game Label to the scene");
-            this._gameLabel = new createjs.Text(" GV Games", "20px Algerian", "#000000");
+            this._gameLabel = new createjs.Text(" GV Games", "20px Consolas", "#000000");
             this._gameLabel.regX = this._gameLabel.getMeasuredWidth() * 0.5;
             this._gameLabel.regY = this._gameLabel.getMeasuredLineHeight() * 0.5;
             this._gameLabel.x = config.Screen.WIDTH * 0.5;
