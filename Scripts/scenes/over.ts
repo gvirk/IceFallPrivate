@@ -98,7 +98,7 @@ module scenes {
                 createjs.Sound.play("cheers");
                 this._gameOverLabel = new createjs.Text(
                     "Congratulations",
-                    "80px Consolas",
+                    "80px Indie Flower",
                     "#ffffff");
                 this._gameOverLabel.regX = this._gameOverLabel.getMeasuredWidth() * 0.5;
                 this._gameOverLabel.regY = this._gameOverLabel.getMeasuredLineHeight() * 0.5;
@@ -109,7 +109,7 @@ module scenes {
             else {
                 this._gameOverLabel = new createjs.Text(
                     "GAME OVER",
-                    "80px Consolas",
+                    "80px Indie Flower",
                     "#ffffff");
                 this._gameOverLabel.regX = this._gameOverLabel.getMeasuredWidth() * 0.5;
                 this._gameOverLabel.regY = this._gameOverLabel.getMeasuredLineHeight() * 0.5;
@@ -122,7 +122,7 @@ module scenes {
 
             this._scoreLabel = new createjs.Text(
                 "Your Score: " + scoreValue,
-                "40px Consolas",
+                "40px Indie Flower",
                 "#ffffff");
             this._scoreLabel.regX = this._scoreLabel.getMeasuredWidth() * 0.5;
             this._scoreLabel.regY = this._scoreLabel.getMeasuredLineHeight() * 0.5;

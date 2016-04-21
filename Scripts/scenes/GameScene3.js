@@ -91,8 +91,9 @@ var scenes;
          */
         GameScene3.prototype.sound = function () {
             createjs.Sound.stop();
-            createjs.Sound.play("game1_background");
-            createjs.Sound.volume = 0.5;
+            this.backgroundScore = createjs.Sound.play("game1_background");
+            this.backgroundScore.volume = 0.5;
+            this.backgroundScore.loop = -1;
         };
         /**
          * Add a spotLight to the scene

@@ -28,6 +28,7 @@ module scenes {
         private coinMaterial: Physijs.Material;
         private coins: Physijs.ConcaveMesh[];
         private coinCount: number;
+        private backgroundScore: createjs.AbstractSoundInstance;
 
         /**
          * Empty Constructor - calls _initialize and start methods
@@ -107,7 +108,9 @@ module scenes {
          */
         public sound(): void {
             createjs.Sound.stop();
-            createjs.Sound.play("menu");
+            this.backgroundScore=createjs.Sound.play("menu");
+            this.backgroundScore.volume=0.5;
+            this.backgroundScore.loop=-1;
         }
 
         /**
@@ -152,7 +155,7 @@ module scenes {
             // Add Game Label
             this._gameLabel = new createjs.Text(
                 " ICE FALL",
-                "130px Consolas",
+                "130px Indie Flower",
                 "#000000");
             this._gameLabel.regX = this._gameLabel.getMeasuredWidth() * 0.5;
             this._gameLabel.regY = this._gameLabel.getMeasuredLineHeight() * 0.5;
@@ -163,7 +166,7 @@ module scenes {
             
             this._gameLabel = new createjs.Text(
                 " GV Games",
-                "20px Consolas",
+                "20px Indie Flower",
                 "#000000");
             this._gameLabel.regX = this._gameLabel.getMeasuredWidth() * 0.5;
             this._gameLabel.regY = this._gameLabel.getMeasuredLineHeight() * 0.5;

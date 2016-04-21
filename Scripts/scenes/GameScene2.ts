@@ -92,10 +92,10 @@ module scenes {
         private scoreLabel: createjs.Text;
         private livesLabel: createjs.Text;
         
-        
         private body:Mesh;
         private bodyCubeGeometry: CubeGeometry;
         private bodyCubeMaterial: LambertMaterial;
+        private backgroundScore: createjs.AbstractSoundInstance;
 
         
 
@@ -219,8 +219,9 @@ module scenes {
          */
         public sound(): void {
             createjs.Sound.stop();
-            createjs.Sound.play("game1_background");
-            createjs.Sound.volume=0.5;
+            this.backgroundScore=createjs.Sound.play("game1_background");
+            this.backgroundScore.volume=0.5;
+            this.backgroundScore.loop=-1;
         }
     
         /**

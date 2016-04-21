@@ -119,8 +119,9 @@ var scenes;
          */
         GameScene2.prototype.sound = function () {
             createjs.Sound.stop();
-            createjs.Sound.play("game1_background");
-            createjs.Sound.volume = 0.5;
+            this.backgroundScore = createjs.Sound.play("game1_background");
+            this.backgroundScore.volume = 0.5;
+            this.backgroundScore.loop = -1;
         };
         /**
          * Adds the player controller to the scene

@@ -162,6 +162,7 @@ module scenes {
         private stage: createjs.Stage;
         private scoreLabel: createjs.Text;
         private livesLabel: createjs.Text;
+        private backgroundScore: createjs.AbstractSoundInstance;
 
         /**
          * @constructor
@@ -256,8 +257,9 @@ module scenes {
          */
         public sound(): void {
             createjs.Sound.stop();
-            createjs.Sound.play("game1_background");
-            createjs.Sound.volume=0.5;
+            this.backgroundScore=createjs.Sound.play("game1_background");
+            this.backgroundScore.volume=0.5;
+            this.backgroundScore.loop=-1;
         }
 
         /**
