@@ -183,7 +183,7 @@ var scenes;
             this.deathGroundGeometry = new BoxGeometry(100, 1, 250);
             this.deathGroundPhysicsMaterial = Physijs.createMaterial(this.deathGroundMaterial, 0, 0);
             this.deathGround = new Physijs.ConvexMesh(this.deathGroundGeometry, this.deathGroundPhysicsMaterial, 0);
-            this.deathGround.receiveShadow = true;
+            this.deathGround.receiveShadow = false;
             this.deathGround.position.set(0, -15, 0);
             this.deathGround.name = "DeathGround";
             this.add(this.deathGround);
@@ -327,11 +327,11 @@ var scenes;
             this.add(this.ground1);
             this.groundGeometry = new BoxGeometry(10, 0.1, 5);
             this.groundPhysicsMaterial = Physijs.createMaterial(this.groundMaterial, 0, 0);
-            this.ground1 = new Physijs.ConvexMesh(this.groundGeometry, this.groundPhysicsMaterial, 0);
-            this.ground1.position.set(0, 0, -75);
-            this.ground1.receiveShadow = true;
-            this.ground1.name = "Ground";
-            this.add(this.ground1);
+            this.fallground = new Physijs.ConvexMesh(this.groundGeometry, this.groundPhysicsMaterial, 0);
+            this.fallground.position.set(0, 0, -75);
+            this.fallground.receiveShadow = true;
+            this.fallground.name = "FallGround";
+            this.add(this.fallground);
             this.groundGeometry = new BoxGeometry(10, 0.1, 10);
             this.groundPhysicsMaterial = Physijs.createMaterial(this.groundMaterial, 0, 0);
             this.ground1 = new Physijs.ConvexMesh(this.groundGeometry, this.groundPhysicsMaterial, 0);
@@ -358,7 +358,7 @@ var scenes;
             this.ground1 = new Physijs.ConvexMesh(this.groundGeometry, this.groundPhysicsMaterial, 0);
             this.ground1.position.set(-15, 0, 0);
             this.ground1.receiveShadow = true;
-            this.ground1.name = "Ground1";
+            this.ground1.name = "Ground";
             this.add(this.ground1);
             this.groundGeometry = new BoxGeometry(10, 0.1, 5);
             this.groundPhysicsMaterial = Physijs.createMaterial(this.groundMaterial, 0, 0);
@@ -397,11 +397,11 @@ var scenes;
             this.add(this.ground1);
             this.groundGeometry = new BoxGeometry(10, 0.1, 5);
             this.groundPhysicsMaterial = Physijs.createMaterial(this.groundMaterial, 0, 0);
-            this.ground1 = new Physijs.ConvexMesh(this.groundGeometry, this.groundPhysicsMaterial, 0);
-            this.ground1.position.set(0, 0, 90);
-            this.ground1.receiveShadow = true;
-            this.ground1.name = "Ground";
-            this.add(this.ground1);
+            this.fallground2 = new Physijs.ConvexMesh(this.groundGeometry, this.groundPhysicsMaterial, 0);
+            this.fallground2.position.set(0, 0, 90);
+            this.fallground2.receiveShadow = true;
+            this.fallground2.name = "FallGround2";
+            this.add(this.fallground2);
             console.log("Added Ground to scene");
         };
         /**
@@ -552,6 +552,22 @@ var scenes;
                     currentScene = config.Scene.INSTRUCTION3;
                     changeScene();
                 }
+                if (eventObject.name === "FallGround") {
+                    this.remove(eventObject);
+                    this.fallground = new Physijs.ConvexMesh(this.groundGeometry, this.groundPhysicsMaterial, 1);
+                    this.fallground.position.set(0, 0, -75);
+                    this.fallground.receiveShadow = true;
+                    this.fallground.name = "Ground";
+                    this.add(this.fallground);
+                }
+                if (eventObject.name === "FallGround2") {
+                    this.remove(eventObject);
+                    this.fallground = new Physijs.ConvexMesh(this.groundGeometry, this.groundPhysicsMaterial, 1);
+                    this.fallground.position.set(0, 0, 90);
+                    this.fallground.receiveShadow = true;
+                    this.fallground.name = "Ground";
+                    this.add(this.fallground);
+                }
                 if (eventObject.name === "Coin") {
                     createjs.Sound.play("coin");
                     self.remove(eventObject);
@@ -578,6 +594,17 @@ var scenes;
                         self.player.rotation.set(0, 3.14159, 0);
                         self.add(self.player);
                     }
+                }
+            }.bind(self));
+            // Collision Check with player
+            this.deathGround.addEventListener('collision', function (eventObject) {
+                if (eventObject.name === "Ground") {
+                    this.remove(eventObject);
+                    this.fallground = new Physijs.ConvexMesh(this.groundGeometry, this.groundPhysicsMaterial, 0);
+                    this.fallground.position.set(0, 0, -75);
+                    this.fallground.receiveShadow = true;
+                    this.fallground.name = "FallGround";
+                    this.add(this.fallground);
                 }
             }.bind(self));
             camera.rotation.set(-0.45, 0, 0);
