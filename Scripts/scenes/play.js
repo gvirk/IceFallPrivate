@@ -413,6 +413,10 @@ var scenes;
                             createjs.Sound.play("jump");
                         }
                     }
+                    if (this.keyboardControls.nextLevel) {
+                        currentScene = config.Scene.INSTRUCTION2;
+                        changeScene();
+                    }
                     this.player.setDamping(0.7, 0.1);
                     // Changing player's rotation
                     this.player.setAngularVelocity(new Vector3(0, this.mouseControls.yaw, 0));

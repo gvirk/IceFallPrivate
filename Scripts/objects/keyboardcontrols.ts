@@ -9,6 +9,8 @@ module objects {
         public jump: boolean;
         public enabled: boolean;
         public paused: boolean;
+        public nextLevel: boolean;
+        public prevLevel: boolean;
         // CONSTRUCTOR ++++++++++++++++++++++++++    
         constructor() {
             this.enabled = false;
@@ -42,6 +44,12 @@ module objects {
                 case 81: /* pause */
                     this.paused = (this.paused) ? false : true;
                     break;
+                case 78: /* N key */
+                    this.nextLevel = true;
+                    break;
+                case 80: /* P key */
+                    this.prevLevel = true;
+                    break;
             }
         }
 
@@ -65,6 +73,12 @@ module objects {
                     break;
                 case 32: /* Spacebar */
                     this.jump = false;
+                    break;
+                case 78: /* N key */
+                    this.nextLevel = true;
+                    break;
+                case 80: /* P key */
+                    this.prevLevel = true;
                     break;
             }
         }

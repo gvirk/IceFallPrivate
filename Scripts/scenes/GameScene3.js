@@ -660,6 +660,10 @@ var scenes;
                         }
                     }
                 }
+                if (this.keyboardControls.prevLevel) {
+                    currentScene = config.Scene.INSTRUCTION2;
+                    changeScene();
+                }
                 this.player.setDamping(0.7, 0.1);
                 // Changing player's rotation
                 this.player.setAngularVelocity(new Vector3(0, this.mouseControls.yaw, 0));

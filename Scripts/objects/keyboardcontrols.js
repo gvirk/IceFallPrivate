@@ -33,6 +33,12 @@ var objects;
                 case 81:
                     this.paused = (this.paused) ? false : true;
                     break;
+                case 78:
+                    this.nextLevel = true;
+                    break;
+                case 80:
+                    this.prevLevel = true;
+                    break;
             }
         };
         KeyboardControls.prototype.onKeyUp = function (event) {
@@ -55,6 +61,12 @@ var objects;
                     break;
                 case 32:
                     this.jump = false;
+                    break;
+                case 78:
+                    this.nextLevel = true;
+                    break;
+                case 80:
+                    this.prevLevel = true;
                     break;
             }
         };
